@@ -1,78 +1,35 @@
 # Pré-requis
 
-Pour pouvoir lancer le site, vous aurez besoin de:
+MVC - Model Vue Controller, permet de structurer et d'organiser le code.
+J'ai suivi des vidéos pour essayer de mieux comprendre son fonctionnement.
+A vrai dire, j'ai encore des difficultés.
+Je comprends le principe des Routes mais pas forcément celui des Controllers.
 
--   PHP cli >= 7.3
--   un serveur MySQL
--   [composer](https://getcomposer.org/download/)
--   toutes les [extensions PHP](https://laravel.com/docs/8.x/deployment#server-requirements) nécessaires au bon fonctionnement de Laravel
+# Organisation de travail
 
-# Installation
+J'ai commencé par mettre en place un Trello; colonne à faire, en cours et enfin terminé.
+J'ai réalisé les tâches en suivant l'ordre établi dans le pdf de l'ECF, en commençant donc par " Critiques ", " Top" , " Watchlist "
+J'ai rencontré des difficultés sur de nombreuses tâches et toute sorte d'erreurs mais c'était cool parce que le projet est vraiment sympa.
 
-## Installation des dépendances
+# Déploiement du projet en ligne
 
-Pour installer les dépendances du projet, vous devrez utiliser composer :
+J'ai mis le site en ligne sur le serveur de Simplon via FileZilla, la base de données est gérée via DBeaver.
+Au départ, j'ai eu des soucis à afficher le site parce qu'il n'y avait pas d'index à la racine.
 
-```
-composer install
-```
 
-## Création de la base de données
 
-Pour faire tourner le projet, vous devrez créer une nouvelle base de données sur
-votre serveur MySQL (avec PhpMyAdmin ou bien en ligne de commande).
 
-## Configuration de la base de données
 
-Une fois les dépendances installées, vous devrez copier le fichier
-`.env.example` en `/env`
 
-```
-cp .env.example .env
-```
 
-Vous devrez ensuite modifier les informations de connexion à la base de données
-contenues dans ce fichier, en fonction du nom que vous aurez donné à votre base
-de donnée, et de votre environnement (port, username, mot de passe)
 
-```
-DB_PORT=???
-DB_DATABASE=???
-DB_USERNAME=???
-DB_PASSWORD=???
-```
 
-### Migrations
 
-Une fois vos informations de connexion renseignées, vous devrez créer toutes les
-tables du projet. Pour faciliter cette tâche, Laravel utilise un système de
-[migrations](https://laravel.com/docs/8.x/migrations) qui automatisent ce
-processus.
 
-Pour lancer les migrations, exécutez la commande suivante :
 
-```
-php artisan migrate
-```
 
-### Seeds
 
-Pour pré-remplir la BDD avec des données prédéfinies, le projet utilise les
-[seeds](https://laravel.com/docs/8.x/seeding) de Laravel. Pour exécuter les
-"seeds", lancez la commande suivante :
 
-```
-php artisan db:seed
-```
 
-## Génération de la clé de chiffrement
 
-Vous pouvez maintenant lancer le serveur de développement en ligne de commande
 
-```
-php artisan serve
-```
-
-Lorsque vos accéderez au site, vous verrez une erreur Laravel, avec un bouton
-qui vous suggère de créer une clé. Cliquez sur ce bouton pour générer la clé,
-puis relancer votre serveur de développement.
